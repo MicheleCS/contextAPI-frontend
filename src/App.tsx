@@ -1,7 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Private } from './pages/Private';
 
@@ -12,7 +10,8 @@ function App() {
       <header>
       <h1>Header do site</h1>
       <nav>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
+        <Link to="/private">Página Privada</Link>
       </nav>
       </header>
       <hr />
