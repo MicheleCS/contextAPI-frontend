@@ -9,8 +9,12 @@ export const useApi = () => ({
     const response = await api.post('/validate', {token});
   },
   signin: async (email: string, password: string) => {
-    const response = await api.post('/signin', {email, password});
-    return response.data;
+    return {
+      user:{id:3, name: "maria", email: "maria@gmail.com"},
+      token: '123456'
+    }
+
+
   },
   signout: async () => {
     const response = await api.post('/signout');
